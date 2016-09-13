@@ -26,12 +26,14 @@ jQuery(function ($) {
     refreshBackground();
 
     $colors = $('.colors');
-    $('#menu-button').on('click', function (){
+    $colorButton = $('#color-button');
+    $colorButton.on('click', function (){
       $colors.toggle();
     })
 
     $('.color').on('click', function (){
       color = $(this).css('background-color');
+      $colorButton.css('background-color', color);
       $colors.hide();
     });
 

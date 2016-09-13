@@ -53,6 +53,7 @@ a, a:link, a:visited, a:hover, a:active {
   float: left;
 }
 
+#color-button[style="background-color: rgb(255, 241, 232);"], /* DEM HAX */
 .white.color {
   border: 2px solid #5F574F;
   box-sizing: border-box;
