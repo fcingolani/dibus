@@ -3,15 +3,27 @@
 jQuery(function ($) {
 
     var $canvas = $('#canvas');
+
+    $colors = $('.colors');
+    $colorButton = $('#color-button');
+
 		var scope = paper.setup('canvas');
 
     var tool = new paper.Tool();
 
-    var color = 'black';
+    var color = pickRandomColor();
     var width = 5;
 
     var path;
     var background;
+
+    function pickRandomColor() {
+      var colors = $colors.find('.color:not(.white)').map(function (i, color){
+        return $(color).css('background-color')
+      });
+
+      return colors[~~(Math.random() * colors.length)];
+    }
 
     function refreshBackground() {
       if(background){
@@ -25,8 +37,8 @@ jQuery(function ($) {
 
     refreshBackground();
 
-    $colors = $('.colors');
-    $colorButton = $('#color-button');
+
+    $colorButton.css('background-color', color);
     $colorButton.on('click', function (){
       $colors.toggle();
     })
