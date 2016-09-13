@@ -32,6 +32,7 @@ jQuery(function ($) {
 
     $('.color').on('click', function (){
       color = $(this).css('background-color');
+      $colors.hide();
     });
 
     $('#download').on('click', function (){
