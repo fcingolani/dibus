@@ -1,0 +1,58 @@
+html,
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family: monospace;
+    color: #5F574F;
+}
+
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+  cursor: crosshair;
+}
+
+#legend {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.colors {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+}
+
+.colors > div {
+  float: left;
+  clear: none;
+  min-width: 40px;
+  min-height: 40px;
+  border: 5px solid #000000;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.black       { background-color: #000000; }
+.dark-blue   { background-color: #1D2B53; }
+.dark-purple { background-color: #7E2553; }
+.dark-green  { background-color: #008751; }
+.brown       { background-color: #AB5236; }
+.dark-gray   { background-color: #5F574F; }
+.light-gray  { background-color: #C2C3C7; }
+.white       { background-color: #FFF1E8; }
+.red         { background-color: #FF004D; }
+.orange      { background-color: #FFA300; }
+.yellow      { background-color: #FFEC27; }
+.green       { background-color: #00E436; }
+.blue        { background-color: #29ADFF; }
+.indigo      { background-color: #83769C; }
+.pink        { background-color: #FF77A8; }
+.peach       { background-color: #FFCCAA; }
