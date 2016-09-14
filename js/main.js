@@ -1,5 +1,3 @@
-//paper.install(window);
-
 jQuery(function ($) {
 
     var $canvas = $('#canvas');
@@ -54,7 +52,8 @@ jQuery(function ($) {
       this.download = 'dibu-'+ Date.now() + '.png';
     });
 
-    tool.minDistance = 10;
+    tool.minDistance = 2;
+    tool.maxDistance = 10;
 
     tool.onMouseDown = function(event) {
         path = new paper.Path();
