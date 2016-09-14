@@ -14,6 +14,7 @@ jQuery(function ($) {
 
     var path;
     var background;
+    var moved = false;
 
     function pickRandomColor() {
       var colors = $colors.find('.color:not(.white)').map(function (i, color){
@@ -63,7 +64,7 @@ jQuery(function ($) {
         path.strokeCap = 'round';
     }
 
-    tool.onMouseDrag = function(event) {
+    tool.onMouseDrag = tool.onMouseUp = function(event) {
         path.add(event.point);
         path.smooth({ type: 'continuous' });
     }
