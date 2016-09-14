@@ -1,3 +1,9 @@
+//var _ = require('underscore');
+var jQuery = require('jquery');
+var paper = require('paper');
+
+//var emojis = require('emojione/emoji.json');
+
 jQuery(function ($) {
 
     var $canvas = $('#canvas');
