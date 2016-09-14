@@ -64,9 +64,16 @@ jQuery(function ($) {
         path.strokeCap = 'round';
     }
 
-    tool.onMouseDrag = tool.onMouseUp = function(event) {
+    tool.onMouseDrag = function(event) {
         path.add(event.point);
         path.smooth({ type: 'continuous' });
+    }
+
+    tool.onMouseUp = function(event) {
+        path.add(event.point);
+        path.smooth({ type: 'continuous' });
+        path.rasterize();
+        path.remove();
     }
 
     scope.view.onResize = refreshBackground;
